@@ -1,0 +1,8 @@
+# Persoonlijke gegevens en lokale instellingen nooit in de repository
+addon_configs/a0d7b954_appdaemon/apps/OpenEMS-M-data/
+addon_configs/a0d7b954_appdaemon/apps/openems_site.yaml
+secrets.yaml
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/

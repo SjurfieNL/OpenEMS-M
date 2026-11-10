@@ -1,0 +1,37 @@
+# OpenEMS-M installatie-instellingen
+#
+# Kopieer dit bestand naar "openems_site.yaml" in dezelfde map
+# (addon_configs/a0d7b954_appdaemon/apps/) en pas het aan.
+# Zonder openems_site.yaml gebruikt OpenEMS de standaardinstallatie
+# (vier accu's berging_accu1 t/m berging_accu4).
+#
+# Na een wijziging: herstart de AppDaemon-add-on.
+
+# Taal waarin Home Assistant de Marstek-entiteiten heeft aangemaakt:
+#   nl  -> sensor.<prefix>_batterij_soc
+#   en  -> sensor.<prefix>_battery_soc
+entiteit_taal: nl
+
+# Eén regel per accu (maximaal 4). "prefix" is het begin van de entity_id's
+# van die accu. Voorbeeld: heet de SOC-sensor "sensor.marstek_venus_batterij_soc",
+# dan is de prefix "marstek_venus".
+accus:
+  - naam: Accu 1
+    prefix: marstek_venus
+
+# Netaansluiting (in watt).
+net:
+  max_import_w: 5750     # 1 x 25 A ≈ 5750 W, 3 x 25 A ≈ 17250 W
+  max_export_w: 5000     # maximale teruglevering
+  marge_w: 100           # veiligheidsmarge onder de importgrens
+
+# Netsensoren (positief = afname van het net).
+sensoren:
+  p1: sensor.p1_meter_power           # P1-netvermogen in W
+  ct_net: ""                          # optioneel: CT-klem op de netaansluiting
+  ct_woning: ""                       # optioneel: CT-klem woningverbruik
+
+# Dynamische energieprijs (all-in sensor met een "prices"-attribuut,
+# zoals de Frank Energie-integratie levert).
+prijs:
+  all_in_sensor: sensor.frank_energie_prijzen_huidige_elektriciteitsprijs_all_in

@@ -1,0 +1,762 @@
+input_boolean:
+  openems_actief:
+    name: OpenEMS hoofdschakelaar
+    icon: mdi:power
+  openems_automatisch_terugvallen_marstek:
+    name: OpenEMS automatisch terugvallen naar Marstek
+    icon: mdi:backup-restore
+  openems_dynamische_terugleverreserve:
+    name: Dynamische reserve tot volgend laadblok
+    icon: mdi:battery-clock-outline
+  openems_netladen_toegestaan:
+    name: Opladen uit het net toegestaan
+    icon: mdi:transmission-tower-import
+  openems_terugleveren_toegestaan:
+    name: Terugleveren aan het net toegestaan
+    icon: mdi:transmission-tower-export
+  openems_snelle_schakelaars_geinitialiseerd:
+    name: OpenEMS snelle schakelaars geïnitialiseerd
+    icon: mdi:toggle-switch
+  openems_instellingen_geinitialiseerd:
+    name: OpenEMS instellingen geïnitialiseerd
+    icon: mdi:check-decagram
+  openems_netoffset_geinitialiseerd:
+    name: OpenEMS netoffset geïnitialiseerd
+    icon: mdi:check-network-outline
+  openems_gridweergave_geinitialiseerd:
+    name: OpenEMS gridweergave geïnitialiseerd
+    icon: mdi:check-network
+  openems_economie_geinitialiseerd:
+    name: OpenEMS economische instellingen geïnitialiseerd
+    icon: mdi:cash-check
+  openems_grid_export_geinitialiseerd:
+    name: OpenEMS Grid Export geïnitialiseerd
+    icon: mdi:transmission-tower-export
+  openems_export_planner_geinitialiseerd:
+    name: OpenEMS Export Planner geïnitialiseerd
+    icon: mdi:calendar-export
+  openems_grid_export_prijsmodel_geinitialiseerd:
+    name: OpenEMS Grid Export-prijsmodel geïnitialiseerd
+    icon: mdi:cash-check
+  openems_rendement_keuzes_geinitialiseerd:
+    name: OpenEMS rendementkeuzes geïnitialiseerd
+    icon: mdi:gauge
+  openems_gescheiden_exportreserve_geinitialiseerd:
+    name: OpenEMS gescheiden exportreserve geinitialiseerd
+    icon: mdi:battery-sync-outline
+  openems_export_reserve_auto:
+    name: OpenEMS automatische exportreserve
+    icon: mdi:battery-heart-outline
+  openems_slim_laden:
+    name: OpenEMS slim vooruitkijken bij laden
+    icon: mdi:calendar-clock
+  openems_slim_laden_geinitialiseerd:
+    name: OpenEMS slim laden geinitialiseerd
+    icon: mdi:calendar-check
+  openems_lb_geinitialiseerd:
+    name: OpenEMS load balancer geinitialiseerd
+    icon: mdi:scale-balance
+  openems_prijsvoorspelling:
+    name: OpenEMS prijsvoorspelling gebruiken
+    icon: mdi:chart-line-variant
+  openems_prijsvoorspelling_geinitialiseerd:
+    name: OpenEMS prijsvoorspelling geinitialiseerd
+    icon: mdi:chart-line-variant
+  openems_offset_eenmalig_geinitialiseerd:
+    name: OpenEMS offset eenmalig geinitialiseerd
+    icon: mdi:tune-vertical
+  openems_lb_p1_uit:
+    name: OpenEMS load balancer P1 uit
+    icon: mdi:meter-electric-outline
+  openems_lb_ct_uit:
+    name: OpenEMS load balancer CT uit
+    icon: mdi:current-ac
+  openems_lb_beide_tegelijk:
+    name: OpenEMS load balancer beide sensoren tegelijk
+    icon: mdi:call-merge
+  openems_accu1_uitgeschakeld:
+    name: OpenEMS Accu 1 uitgeschakeld
+    icon: mdi:battery-off-outline
+  openems_accu2_uitgeschakeld:
+    name: OpenEMS Accu 2 uitgeschakeld
+    icon: mdi:battery-off-outline
+  openems_accu3_uitgeschakeld:
+    name: OpenEMS Accu 3 uitgeschakeld
+    icon: mdi:battery-off-outline
+  openems_accu4_uitgeschakeld:
+    name: OpenEMS Accu 4 uitgeschakeld
+    icon: mdi:battery-off-outline
+  openems_handmatig_accu1_uit:
+    name: OpenEMS handmatig Accu 1 doet niet mee
+    icon: mdi:battery-off-outline
+  openems_handmatig_accu2_uit:
+    name: OpenEMS handmatig Accu 2 doet niet mee
+    icon: mdi:battery-off-outline
+  openems_handmatig_accu3_uit:
+    name: OpenEMS handmatig Accu 3 doet niet mee
+    icon: mdi:battery-off-outline
+  openems_handmatig_accu4_uit:
+    name: OpenEMS handmatig Accu 4 doet niet mee
+    icon: mdi:battery-off-outline
+  openems_loadbalancer_laden_uit:
+    name: OpenEMS Load Balancer laden uit
+    icon: mdi:scale-balance
+  openems_loadbalancer_terugleveren_uit:
+    name: OpenEMS Load Balancer terugleveren uit
+    icon: mdi:scale-balance
+  openems_loadbalancer_handmatig_uit:
+    name: OpenEMS Load Balancer handmatige modus uit
+    icon: mdi:scale-balance
+
+input_button:
+  openems_huidige_instellingen_opslaan:
+    name: Huidige instellingen als mijn standaard opslaan
+    icon: mdi:content-save-cog
+  openems_eigen_standaard_herstellen:
+    name: Mijn standaardinstellingen herstellen
+    icon: mdi:backup-restore
+  openems_fabrieksinstellingen_herstellen:
+    name: Fabrieksinstellingen herstellen
+    icon: mdi:factory
+  openems_home_offset_kalibreren:
+    name: OpenEMS woningoffset kalibreren
+    icon: mdi:home-lightning-bolt-outline
+  openems_grid_offset_kalibreren:
+    name: OpenEMS netoffset opnieuw kalibreren
+    icon: mdi:target
+  openems_runtime_gebeurtenissen_wissen:
+    name: OpenEMS gebeurtenishistorie wissen
+    icon: mdi:delete-sweep-outline
+
+input_number:
+  openems_laden_vanaf:
+    name: OpenEMS laden vanaf
+    min: 0
+    max: 23
+    step: 1
+    unit_of_measurement: uur
+    icon: mdi:clock-start
+  openems_laden_tot:
+    name: OpenEMS laden tot
+    min: 1
+    max: 24
+    step: 1
+    unit_of_measurement: uur
+    icon: mdi:clock-end
+  openems_minimaal_laadvermogen_per_accu:
+    name: OpenEMS minimaal laadvermogen per accu
+    min: 500
+    max: 2500
+    step: 25
+    unit_of_measurement: W
+    icon: mdi:lightning-bolt
+  openems_handmatig_laadrendement:
+    name: OpenEMS handmatig laadrendement
+    min: 50
+    max: 100
+    step: 0.5
+    unit_of_measurement: "%"
+    icon: mdi:percent
+  openems_slim_laden_reserve_soc:
+    name: OpenEMS slim laden reserve SOC
+    min: 0
+    max: 50
+    step: 1
+    unit_of_measurement: "%"
+    icon: mdi:battery-low
+  openems_slim_laden_buffer:
+    name: OpenEMS slim laden buffer verbruik
+    min: 0
+    max: 100
+    step: 5
+    unit_of_measurement: "%"
+    icon: mdi:battery-plus-outline
+  openems_slim_laden_min_verschil:
+    name: OpenEMS slim laden minimaal goedkoper
+    min: 0
+    max: 20
+    step: 0.5
+    unit_of_measurement: ct
+    icon: mdi:cash-minus
+  openems_lb_max_import:
+    name: OpenEMS load balancer maximale import
+    min: 1000
+    max: 30000
+    step: 50
+    mode: box
+    unit_of_measurement: W
+    icon: mdi:transmission-tower-import
+  openems_lb_max_export:
+    name: OpenEMS load balancer maximale export
+    min: 500
+    max: 30000
+    step: 50
+    mode: box
+    unit_of_measurement: W
+    icon: mdi:transmission-tower-export
+  openems_prijsvoorspelling_min_verschil:
+    name: OpenEMS voorspelling minimaal goedkoper
+    min: 0
+    max: 30
+    step: 0.5
+    unit_of_measurement: ct
+    icon: mdi:cash-minus
+  openems_prijsvoorspelling_extra_marge:
+    name: OpenEMS voorspelling extra marge bij schatting
+    min: 0
+    max: 10
+    step: 0.5
+    unit_of_measurement: ct
+    icon: mdi:shield-plus
+  openems_prijsvoorspelling_ondergrens_soc:
+    name: OpenEMS voorspelling ondergrens SOC
+    min: 0
+    max: 80
+    step: 5
+    unit_of_measurement: "%"
+    icon: mdi:battery-low
+  openems_prijsvoorspelling_dagen:
+    name: OpenEMS voorspelling dagen vooruit
+    min: 1
+    max: 3
+    step: 1
+    icon: mdi:calendar-range
+  openems_handmatig_laadvermogen_totaal:
+    name: OpenEMS handmatig laadvermogen totaal
+    min: 0
+    max: 8000
+    step: 50
+    unit_of_measurement: W
+    icon: mdi:battery-arrow-up
+  openems_handmatig_ontlaadvermogen_totaal:
+    name: OpenEMS handmatig ontlaadvermogen totaal
+    min: 0
+    max: 8000
+    step: 50
+    unit_of_measurement: W
+    icon: mdi:battery-arrow-down
+  openems_grid_handmatige_offset:
+    name: OpenEMS handmatige netoffset
+    min: -150
+    max: 150
+    step: 2
+    unit_of_measurement: W
+    icon: mdi:tune-vertical
+  openems_grid_automatische_offset:
+    name: OpenEMS automatisch berekende netoffset
+    min: -300
+    max: 300
+    step: 1
+    unit_of_measurement: W
+    icon: mdi:auto-fix
+  openems_handmatig_ontlaadrendement:
+    name: OpenEMS handmatig ontlaadrendement
+    min: 50
+    max: 100
+    step: 0.5
+    unit_of_measurement: "%"
+    icon: mdi:percent
+  openems_handmatig_export_totaalrendement:
+    name: OpenEMS handmatig totaalrendement Grid Export
+    min: 70
+    max: 100
+    step: 0.5
+    unit_of_measurement: "%"
+    icon: mdi:percent
+  openems_minimale_ontlaadblokduur:
+    name: OpenEMS minimale ontlaadblokduur
+    min: 15
+    max: 180
+    step: 15
+    unit_of_measurement: min
+    icon: mdi:timer-outline
+  openems_minimale_exportwinst_per_kwh:
+    name: OpenEMS marge onder hoogste dagprijs
+    min: 0
+    max: 0.50
+    step: 0.005
+    unit_of_measurement: EUR/kWh
+    icon: mdi:cash-plus
+  openems_minimaal_prijsverschil_grid_export:
+    name: OpenEMS terugleveren minimaal laadprijsverschil
+    min: 0
+    max: 0.50
+    step: 0.0001
+    unit_of_measurement: EUR/kWh
+    icon: mdi:cash-check
+  openems_frank_terugleververgoeding:
+    name: OpenEMS Frank terugleververgoeding
+    min: 0
+    max: 0.25
+    step: 0.0001
+    unit_of_measurement: EUR/kWh
+    icon: mdi:cash-plus
+  openems_maximaal_exportvermogen:
+    name: OpenEMS maximaal exportvermogen
+    min: 0
+    max: 30000
+    step: 50
+    unit_of_measurement: W
+    icon: mdi:transmission-tower-export
+  openems_export_veiligheidsbuffer_soc:
+    name: OpenEMS reserve voor eigen verbruik
+    min: 0
+    max: 100
+    step: 1
+    unit_of_measurement: "%"
+    icon: mdi:battery-lock
+  openems_export_vaste_reserve_kwh:
+    name: OpenEMS reserve na laden
+    min: 0.56
+    max: 15.36
+    step: 0.01
+    unit_of_measurement: kWh
+    icon: mdi:battery-lock
+  openems_export_reserve_voor_laden_kwh:
+    name: OpenEMS reserve voor laden
+    min: 0.56
+    max: 15.36
+    step: 0.01
+    unit_of_measurement: kWh
+    icon: mdi:battery-clock-outline
+  openems_export_dynamische_reserve_kwh:
+    name: OpenEMS dynamische reserve
+    min: 0.56
+    max: 15.36
+    step: 0.01
+    unit_of_measurement: kWh
+    icon: mdi:battery-heart-outline
+  openems_ct_verbruik_offset:
+    name: OpenEMS CT-verbruiksoffset
+    min: -150
+    max: 150
+    step: 2
+    unit_of_measurement: W
+    icon: mdi:home-lightning-bolt-outline
+input_select:
+  openems_handmatig_verdeling:
+    name: OpenEMS handmatige verdeling
+    options:
+      - Gelijk
+      - Naar SOC
+    icon: mdi:scale-balance
+  openems_laad_rendement_modus:
+    name: OpenEMS rendement bij laden
+    options:
+      - Geen rendement
+      - Zelfgeleerd rendement
+      - Handmatig rendement
+    icon: mdi:battery-arrow-up
+  openems_ontlaad_rendement_modus:
+    name: OpenEMS rendement bij ontladen
+    options:
+      - Geen rendement
+      - Zelfgeleerd rendement
+      - Handmatig rendement
+    icon: mdi:battery-arrow-down
+  openems_export_rendement_modus:
+    name: OpenEMS rendement voor Export Planner
+    options:
+      - Geen rendement
+      - Zelfgeleerd rendement
+      - Handmatig rendement
+    icon: mdi:transmission-tower-export
+  openems_handmatige_modus:
+    name: OpenEMS handmatige modus
+    options:
+      - Stop
+      - Laden
+      - Ontladen
+      - Zelfconsumptie
+    icon: mdi:hand-back-right
+  openems_zelfconsumptieregeling:
+    name: OpenEMS zelfconsumptieregeling
+    options:
+      - Marstek
+      - OpenEMS
+    icon: mdi:swap-horizontal
+  openems_accuverdeling:
+    name: OpenEMS verdeling bij zelfconsumptie
+    options:
+      - Alle accu’s verdelen
+      - Efficiënte accuselector (aanbevolen)
+    icon: mdi:battery-sync-outline
+  openems_grid_vermogen_teken:
+    name: OpenEMS teken netvermogen
+    options:
+      - Positief is afname
+      - Positief is teruglevering
+    icon: mdi:plus-minus-variant
+  openems_grid_offset_modus:
+    name: OpenEMS netoffsetmodus
+    options:
+      - Handmatig
+      - Automatisch
+    icon: mdi:tune-variant
+  openems_grid_sensor_bron:
+    name: OpenEMS netvermogensbron
+    options:
+      - P1
+      - CT
+    icon: mdi:meter-electric-outline
+  openems_lb_voorkeur:
+    name: OpenEMS load balancer voorkeurssensor
+    options:
+      - P1
+      - CT
+    icon: mdi:swap-horizontal
+  openems_export_reserve_modus:
+    name: OpenEMS reserve na laden
+    options:
+      - Vast
+      - Dynamisch
+    icon: mdi:battery-lock
+  openems_export_reserve_voor_laden_modus:
+    name: OpenEMS reserve voor laden
+    options:
+      - Vast
+      - Dynamisch
+    icon: mdi:battery-clock-outline
+  openems_ontlaad_tijdresolutie:
+    name: OpenEMS tijdresolutie
+    options:
+      - 15 minuten
+      - 60 minuten
+    icon: mdi:timeline-clock-outline
+  openems_grid_export_modus:
+    name: OpenEMS Grid Export-modus
+    options:
+      - Uit
+      - Alleen simuleren
+      - Automatisch exporteren
+    icon: mdi:transmission-tower-export
+
+input_text:
+  openems_frank_all_in_prijssensor:
+    name: OpenEMS Frank all-in inkoopprijssensor
+    max: 255
+    icon: mdi:cash
+  openems_frank_marktprijssensor:
+    name: OpenEMS Frank marktprijssensor
+    max: 255
+    icon: mdi:chart-line
+  openems_woning_vermogenssensor:
+    name: OpenEMS woning-vermogenssensor
+    max: 255
+    icon: mdi:home-lightning-bolt-outline
+  openems_grid_vermogenssensor:
+    name: OpenEMS grid-vermogenssensor
+    max: 255
+    icon: mdi:transmission-tower
+  openems_home_offset_laatste_kalibratie:
+    name: OpenEMS laatste woningoffsetkalibratie
+    max: 100
+    icon: mdi:home-lightning-bolt-outline
+  openems_offset_laatste_kalibratie:
+    name: OpenEMS laatste offsetkalibratie
+    max: 100
+    icon: mdi:tune-vertical
+  openems_prijsvoorspelling_sensor:
+    name: OpenEMS prijsvoorspelling sensor
+    max: 255
+    icon: mdi:chart-line-variant
+  openems_grid_verbruiksensor:
+    name: OpenEMS gridverbruiksensor voor weergave
+    max: 255
+    icon: mdi:meter-electric
+  openems_grid_referentiesensor:
+    name: OpenEMS betrouwbare net-referentiesensor
+    max: 255
+    icon: mdi:meter-electric-outline
+  openems_zon_vermogenssensor:
+    name: OpenEMS zon-vermogenssensor
+    max: 255
+    icon: mdi:solar-power
+  openems_accu1_soc:
+    name: OpenEMS Accu 1 SOC
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_capacity:
+    name: OpenEMS Accu 1 capaciteit
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_actual_power:
+    name: OpenEMS Accu 1 werkelijk vermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_max_charge_power:
+    name: OpenEMS Accu 1 maximaal laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_max_discharge_power:
+    name: OpenEMS Accu 1 maximaal ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_charge_power:
+    name: OpenEMS Accu 1 ingesteld laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_discharge_power:
+    name: OpenEMS Accu 1 ingesteld ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_rs485_control:
+    name: OpenEMS Accu 1 RS485-besturing
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_work_mode:
+    name: OpenEMS Accu 1 werkmodus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_force_mode:
+    name: OpenEMS Accu 1 Force Mode
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_max_cell_voltage:
+    name: OpenEMS Accu 1 hoogste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_min_cell_voltage:
+    name: OpenEMS Accu 1 laagste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_temperature:
+    name: OpenEMS Accu 1 temperatuur
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_cycles:
+    name: OpenEMS Accu 1 cycli
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_total_charging_energy:
+    name: OpenEMS Accu 1 totaal geladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_total_discharging_energy:
+    name: OpenEMS Accu 1 totaal ontladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_alarm_status:
+    name: OpenEMS Accu 1 alarmstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu1_fault_status:
+    name: OpenEMS Accu 1 foutstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_soc:
+    name: OpenEMS Accu 2 SOC
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_capacity:
+    name: OpenEMS Accu 2 capaciteit
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_actual_power:
+    name: OpenEMS Accu 2 werkelijk vermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_max_charge_power:
+    name: OpenEMS Accu 2 maximaal laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_max_discharge_power:
+    name: OpenEMS Accu 2 maximaal ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_charge_power:
+    name: OpenEMS Accu 2 ingesteld laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_discharge_power:
+    name: OpenEMS Accu 2 ingesteld ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_rs485_control:
+    name: OpenEMS Accu 2 RS485-besturing
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_work_mode:
+    name: OpenEMS Accu 2 werkmodus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_force_mode:
+    name: OpenEMS Accu 2 Force Mode
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_max_cell_voltage:
+    name: OpenEMS Accu 2 hoogste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_min_cell_voltage:
+    name: OpenEMS Accu 2 laagste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_temperature:
+    name: OpenEMS Accu 2 temperatuur
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_cycles:
+    name: OpenEMS Accu 2 cycli
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_total_charging_energy:
+    name: OpenEMS Accu 2 totaal geladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_total_discharging_energy:
+    name: OpenEMS Accu 2 totaal ontladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_alarm_status:
+    name: OpenEMS Accu 2 alarmstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu2_fault_status:
+    name: OpenEMS Accu 2 foutstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_soc:
+    name: OpenEMS Accu 3 SOC
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_capacity:
+    name: OpenEMS Accu 3 capaciteit
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_actual_power:
+    name: OpenEMS Accu 3 werkelijk vermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_max_charge_power:
+    name: OpenEMS Accu 3 maximaal laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_max_discharge_power:
+    name: OpenEMS Accu 3 maximaal ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_charge_power:
+    name: OpenEMS Accu 3 ingesteld laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_discharge_power:
+    name: OpenEMS Accu 3 ingesteld ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_rs485_control:
+    name: OpenEMS Accu 3 RS485-besturing
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_work_mode:
+    name: OpenEMS Accu 3 werkmodus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_force_mode:
+    name: OpenEMS Accu 3 Force Mode
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_max_cell_voltage:
+    name: OpenEMS Accu 3 hoogste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_min_cell_voltage:
+    name: OpenEMS Accu 3 laagste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_temperature:
+    name: OpenEMS Accu 3 temperatuur
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_cycles:
+    name: OpenEMS Accu 3 cycli
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_total_charging_energy:
+    name: OpenEMS Accu 3 totaal geladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_total_discharging_energy:
+    name: OpenEMS Accu 3 totaal ontladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_alarm_status:
+    name: OpenEMS Accu 3 alarmstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu3_fault_status:
+    name: OpenEMS Accu 3 foutstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_soc:
+    name: OpenEMS Accu 4 SOC
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_capacity:
+    name: OpenEMS Accu 4 capaciteit
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_actual_power:
+    name: OpenEMS Accu 4 werkelijk vermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_max_charge_power:
+    name: OpenEMS Accu 4 maximaal laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_max_discharge_power:
+    name: OpenEMS Accu 4 maximaal ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_charge_power:
+    name: OpenEMS Accu 4 ingesteld laadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_discharge_power:
+    name: OpenEMS Accu 4 ingesteld ontlaadvermogen
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_rs485_control:
+    name: OpenEMS Accu 4 RS485-besturing
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_work_mode:
+    name: OpenEMS Accu 4 werkmodus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_force_mode:
+    name: OpenEMS Accu 4 Force Mode
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_max_cell_voltage:
+    name: OpenEMS Accu 4 hoogste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_min_cell_voltage:
+    name: OpenEMS Accu 4 laagste celspanning
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_temperature:
+    name: OpenEMS Accu 4 temperatuur
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_cycles:
+    name: OpenEMS Accu 4 cycli
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_total_charging_energy:
+    name: OpenEMS Accu 4 totaal geladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_total_discharging_energy:
+    name: OpenEMS Accu 4 totaal ontladen energie
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_alarm_status:
+    name: OpenEMS Accu 4 alarmstatus
+    max: 255
+    icon: mdi:link-variant
+  openems_accu4_fault_status:
+    name: OpenEMS Accu 4 foutstatus
+    max: 255
+    icon: mdi:link-variant
