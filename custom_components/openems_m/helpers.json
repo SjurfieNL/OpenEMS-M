@@ -1,0 +1,981 @@
+{
+ "input_boolean": {
+  "openems_accu1_uitgeschakeld": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS Accu 1 uitgeschakeld"
+  },
+  "openems_accu2_uitgeschakeld": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS Accu 2 uitgeschakeld"
+  },
+  "openems_accu3_uitgeschakeld": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS Accu 3 uitgeschakeld"
+  },
+  "openems_accu4_uitgeschakeld": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS Accu 4 uitgeschakeld"
+  },
+  "openems_actief": {
+   "icon": "mdi:power",
+   "name": "OpenEMS hoofdschakelaar"
+  },
+  "openems_automatisch_terugvallen_marstek": {
+   "icon": "mdi:backup-restore",
+   "name": "OpenEMS automatisch terugvallen naar Marstek"
+  },
+  "openems_dynamische_terugleverreserve": {
+   "icon": "mdi:battery-clock-outline",
+   "name": "Dynamische reserve tot volgend laadblok"
+  },
+  "openems_economie_geinitialiseerd": {
+   "icon": "mdi:cash-check",
+   "name": "OpenEMS economische instellingen geïnitialiseerd"
+  },
+  "openems_export_planner_geinitialiseerd": {
+   "icon": "mdi:calendar-export",
+   "name": "OpenEMS Export Planner geïnitialiseerd"
+  },
+  "openems_export_reserve_auto": {
+   "icon": "mdi:battery-heart-outline",
+   "name": "OpenEMS automatische exportreserve"
+  },
+  "openems_gescheiden_exportreserve_geinitialiseerd": {
+   "icon": "mdi:battery-sync-outline",
+   "name": "OpenEMS gescheiden exportreserve geinitialiseerd"
+  },
+  "openems_grid_export_geinitialiseerd": {
+   "icon": "mdi:transmission-tower-export",
+   "name": "OpenEMS Grid Export geïnitialiseerd"
+  },
+  "openems_grid_export_prijsmodel_geinitialiseerd": {
+   "icon": "mdi:cash-check",
+   "name": "OpenEMS Grid Export-prijsmodel geïnitialiseerd"
+  },
+  "openems_gridweergave_geinitialiseerd": {
+   "icon": "mdi:check-network",
+   "name": "OpenEMS gridweergave geïnitialiseerd"
+  },
+  "openems_handmatig_accu1_uit": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS handmatig Accu 1 doet niet mee"
+  },
+  "openems_handmatig_accu2_uit": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS handmatig Accu 2 doet niet mee"
+  },
+  "openems_handmatig_accu3_uit": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS handmatig Accu 3 doet niet mee"
+  },
+  "openems_handmatig_accu4_uit": {
+   "icon": "mdi:battery-off-outline",
+   "name": "OpenEMS handmatig Accu 4 doet niet mee"
+  },
+  "openems_instellingen_geinitialiseerd": {
+   "icon": "mdi:check-decagram",
+   "name": "OpenEMS instellingen geïnitialiseerd"
+  },
+  "openems_lb_beide_tegelijk": {
+   "icon": "mdi:call-merge",
+   "name": "OpenEMS load balancer beide sensoren tegelijk"
+  },
+  "openems_lb_ct_uit": {
+   "icon": "mdi:current-ac",
+   "name": "OpenEMS load balancer CT uit"
+  },
+  "openems_lb_geinitialiseerd": {
+   "icon": "mdi:scale-balance",
+   "name": "OpenEMS load balancer geinitialiseerd"
+  },
+  "openems_lb_p1_uit": {
+   "icon": "mdi:meter-electric-outline",
+   "name": "OpenEMS load balancer P1 uit"
+  },
+  "openems_loadbalancer_handmatig_uit": {
+   "icon": "mdi:scale-balance",
+   "name": "OpenEMS Load Balancer handmatige modus uit"
+  },
+  "openems_loadbalancer_laden_uit": {
+   "icon": "mdi:scale-balance",
+   "name": "OpenEMS Load Balancer laden uit"
+  },
+  "openems_loadbalancer_terugleveren_uit": {
+   "icon": "mdi:scale-balance",
+   "name": "OpenEMS Load Balancer terugleveren uit"
+  },
+  "openems_netladen_toegestaan": {
+   "icon": "mdi:transmission-tower-import",
+   "name": "Opladen uit het net toegestaan"
+  },
+  "openems_netoffset_geinitialiseerd": {
+   "icon": "mdi:check-network-outline",
+   "name": "OpenEMS netoffset geïnitialiseerd"
+  },
+  "openems_offset_eenmalig_geinitialiseerd": {
+   "icon": "mdi:tune-vertical",
+   "name": "OpenEMS offset eenmalig geinitialiseerd"
+  },
+  "openems_prijsvoorspelling": {
+   "icon": "mdi:chart-line-variant",
+   "name": "OpenEMS prijsvoorspelling gebruiken"
+  },
+  "openems_prijsvoorspelling_geinitialiseerd": {
+   "icon": "mdi:chart-line-variant",
+   "name": "OpenEMS prijsvoorspelling geinitialiseerd"
+  },
+  "openems_rendement_keuzes_geinitialiseerd": {
+   "icon": "mdi:gauge",
+   "name": "OpenEMS rendementkeuzes geïnitialiseerd"
+  },
+  "openems_slim_laden": {
+   "icon": "mdi:calendar-clock",
+   "name": "OpenEMS slim vooruitkijken bij laden"
+  },
+  "openems_slim_laden_geinitialiseerd": {
+   "icon": "mdi:calendar-check",
+   "name": "OpenEMS slim laden geinitialiseerd"
+  },
+  "openems_snelle_schakelaars_geinitialiseerd": {
+   "icon": "mdi:toggle-switch",
+   "name": "OpenEMS snelle schakelaars geïnitialiseerd"
+  },
+  "openems_terugleveren_toegestaan": {
+   "icon": "mdi:transmission-tower-export",
+   "name": "Terugleveren aan het net toegestaan"
+  }
+ },
+ "input_button": {
+  "openems_eigen_standaard_herstellen": {
+   "icon": "mdi:backup-restore",
+   "name": "Mijn standaardinstellingen herstellen"
+  },
+  "openems_fabrieksinstellingen_herstellen": {
+   "icon": "mdi:factory",
+   "name": "Fabrieksinstellingen herstellen"
+  },
+  "openems_grid_offset_kalibreren": {
+   "icon": "mdi:target",
+   "name": "OpenEMS netoffset opnieuw kalibreren"
+  },
+  "openems_home_offset_kalibreren": {
+   "icon": "mdi:home-lightning-bolt-outline",
+   "name": "OpenEMS woningoffset kalibreren"
+  },
+  "openems_huidige_instellingen_opslaan": {
+   "icon": "mdi:content-save-cog",
+   "name": "Huidige instellingen als mijn standaard opslaan"
+  },
+  "openems_runtime_gebeurtenissen_wissen": {
+   "icon": "mdi:delete-sweep-outline",
+   "name": "OpenEMS gebeurtenishistorie wissen"
+  }
+ },
+ "input_number": {
+  "marstek_doel_soc": {
+   "icon": "mdi:battery-arrow-up",
+   "max": 100,
+   "min": 50,
+   "name": "Marstek doel-SOC",
+   "step": 1,
+   "unit_of_measurement": "%"
+  },
+  "marstek_minimaal_prijsverschil_ontladen": {
+   "icon": "mdi:cash-minus",
+   "max": 0.5,
+   "min": 0,
+   "name": "Marstek minimaal prijsverschil ontladen",
+   "step": 0.001,
+   "unit_of_measurement": "€/kWh"
+  },
+  "marstek_minimum_soc": {
+   "icon": "mdi:battery-arrow-down",
+   "max": 50,
+   "min": 5,
+   "name": "Marstek minimum-SOC",
+   "step": 1,
+   "unit_of_measurement": "%"
+  },
+  "marstek_prijsmarge": {
+   "icon": "mdi:cash-plus",
+   "max": 0.05,
+   "min": 0,
+   "name": "Marstek prijsmarge laden",
+   "step": 0.001,
+   "unit_of_measurement": "€/kWh"
+  },
+  "openems_ct_verbruik_offset": {
+   "icon": "mdi:home-lightning-bolt-outline",
+   "max": 150,
+   "min": -150,
+   "name": "OpenEMS CT-verbruiksoffset",
+   "step": 2,
+   "unit_of_measurement": "W"
+  },
+  "openems_export_dynamische_reserve_kwh": {
+   "icon": "mdi:battery-heart-outline",
+   "max": 15.36,
+   "min": 0.56,
+   "name": "OpenEMS dynamische reserve",
+   "step": 0.01,
+   "unit_of_measurement": "kWh"
+  },
+  "openems_export_reserve_voor_laden_kwh": {
+   "icon": "mdi:battery-clock-outline",
+   "max": 15.36,
+   "min": 0.56,
+   "name": "OpenEMS reserve voor laden",
+   "step": 0.01,
+   "unit_of_measurement": "kWh"
+  },
+  "openems_export_vaste_reserve_kwh": {
+   "icon": "mdi:battery-lock",
+   "max": 15.36,
+   "min": 0.56,
+   "name": "OpenEMS reserve na laden",
+   "step": 0.01,
+   "unit_of_measurement": "kWh"
+  },
+  "openems_export_veiligheidsbuffer_soc": {
+   "icon": "mdi:battery-lock",
+   "max": 100,
+   "min": 0,
+   "name": "OpenEMS reserve voor eigen verbruik",
+   "step": 1,
+   "unit_of_measurement": "%"
+  },
+  "openems_frank_terugleververgoeding": {
+   "icon": "mdi:cash-plus",
+   "max": 0.25,
+   "min": 0,
+   "name": "OpenEMS Frank terugleververgoeding",
+   "step": 0.0001,
+   "unit_of_measurement": "EUR/kWh"
+  },
+  "openems_grid_automatische_offset": {
+   "icon": "mdi:auto-fix",
+   "max": 300,
+   "min": -300,
+   "name": "OpenEMS automatisch berekende netoffset",
+   "step": 1,
+   "unit_of_measurement": "W"
+  },
+  "openems_grid_handmatige_offset": {
+   "icon": "mdi:tune-vertical",
+   "max": 150,
+   "min": -150,
+   "name": "OpenEMS handmatige netoffset",
+   "step": 2,
+   "unit_of_measurement": "W"
+  },
+  "openems_handmatig_export_totaalrendement": {
+   "icon": "mdi:percent",
+   "max": 100,
+   "min": 70,
+   "name": "OpenEMS handmatig totaalrendement Grid Export",
+   "step": 0.5,
+   "unit_of_measurement": "%"
+  },
+  "openems_handmatig_laadrendement": {
+   "icon": "mdi:percent",
+   "max": 100,
+   "min": 50,
+   "name": "OpenEMS handmatig laadrendement",
+   "step": 0.5,
+   "unit_of_measurement": "%"
+  },
+  "openems_handmatig_laadvermogen_totaal": {
+   "icon": "mdi:battery-arrow-up",
+   "max": 8000,
+   "min": 0,
+   "name": "OpenEMS handmatig laadvermogen totaal",
+   "step": 50,
+   "unit_of_measurement": "W"
+  },
+  "openems_handmatig_ontlaadrendement": {
+   "icon": "mdi:percent",
+   "max": 100,
+   "min": 50,
+   "name": "OpenEMS handmatig ontlaadrendement",
+   "step": 0.5,
+   "unit_of_measurement": "%"
+  },
+  "openems_handmatig_ontlaadvermogen_totaal": {
+   "icon": "mdi:battery-arrow-down",
+   "max": 8000,
+   "min": 0,
+   "name": "OpenEMS handmatig ontlaadvermogen totaal",
+   "step": 50,
+   "unit_of_measurement": "W"
+  },
+  "openems_laden_tot": {
+   "icon": "mdi:clock-end",
+   "max": 24,
+   "min": 1,
+   "name": "OpenEMS laden tot",
+   "step": 1,
+   "unit_of_measurement": "uur"
+  },
+  "openems_laden_vanaf": {
+   "icon": "mdi:clock-start",
+   "max": 23,
+   "min": 0,
+   "name": "OpenEMS laden vanaf",
+   "step": 1,
+   "unit_of_measurement": "uur"
+  },
+  "openems_lb_max_export": {
+   "icon": "mdi:transmission-tower-export",
+   "max": 30000,
+   "min": 500,
+   "mode": "box",
+   "name": "OpenEMS load balancer maximale export",
+   "step": 50,
+   "unit_of_measurement": "W"
+  },
+  "openems_lb_max_import": {
+   "icon": "mdi:transmission-tower-import",
+   "max": 30000,
+   "min": 1000,
+   "mode": "box",
+   "name": "OpenEMS load balancer maximale import",
+   "step": 50,
+   "unit_of_measurement": "W"
+  },
+  "openems_maximaal_exportvermogen": {
+   "icon": "mdi:transmission-tower-export",
+   "max": 30000,
+   "min": 0,
+   "name": "OpenEMS maximaal exportvermogen",
+   "step": 50,
+   "unit_of_measurement": "W"
+  },
+  "openems_minimaal_laadvermogen_per_accu": {
+   "icon": "mdi:lightning-bolt",
+   "max": 2500,
+   "min": 500,
+   "name": "OpenEMS minimaal laadvermogen per accu",
+   "step": 25,
+   "unit_of_measurement": "W"
+  },
+  "openems_minimaal_prijsverschil_grid_export": {
+   "icon": "mdi:cash-check",
+   "max": 0.5,
+   "min": 0,
+   "name": "OpenEMS terugleveren minimaal laadprijsverschil",
+   "step": 0.0001,
+   "unit_of_measurement": "EUR/kWh"
+  },
+  "openems_minimale_exportwinst_per_kwh": {
+   "icon": "mdi:cash-plus",
+   "max": 0.5,
+   "min": 0,
+   "name": "OpenEMS marge onder hoogste dagprijs",
+   "step": 0.005,
+   "unit_of_measurement": "EUR/kWh"
+  },
+  "openems_minimale_ontlaadblokduur": {
+   "icon": "mdi:timer-outline",
+   "max": 180,
+   "min": 15,
+   "name": "OpenEMS minimale ontlaadblokduur",
+   "step": 15,
+   "unit_of_measurement": "min"
+  },
+  "openems_prijsvoorspelling_dagen": {
+   "icon": "mdi:calendar-range",
+   "max": 3,
+   "min": 1,
+   "name": "OpenEMS voorspelling dagen vooruit",
+   "step": 1
+  },
+  "openems_prijsvoorspelling_extra_marge": {
+   "icon": "mdi:shield-plus",
+   "max": 10,
+   "min": 0,
+   "name": "OpenEMS voorspelling extra marge bij schatting",
+   "step": 0.5,
+   "unit_of_measurement": "ct"
+  },
+  "openems_prijsvoorspelling_min_verschil": {
+   "icon": "mdi:cash-minus",
+   "max": 30,
+   "min": 0,
+   "name": "OpenEMS voorspelling minimaal goedkoper",
+   "step": 0.5,
+   "unit_of_measurement": "ct"
+  },
+  "openems_prijsvoorspelling_ondergrens_soc": {
+   "icon": "mdi:battery-low",
+   "max": 80,
+   "min": 0,
+   "name": "OpenEMS voorspelling ondergrens SOC",
+   "step": 5,
+   "unit_of_measurement": "%"
+  },
+  "openems_slim_laden_buffer": {
+   "icon": "mdi:battery-plus-outline",
+   "max": 100,
+   "min": 0,
+   "name": "OpenEMS slim laden buffer verbruik",
+   "step": 5,
+   "unit_of_measurement": "%"
+  },
+  "openems_slim_laden_min_verschil": {
+   "icon": "mdi:cash-minus",
+   "max": 20,
+   "min": 0,
+   "name": "OpenEMS slim laden minimaal goedkoper",
+   "step": 0.5,
+   "unit_of_measurement": "ct"
+  },
+  "openems_slim_laden_reserve_soc": {
+   "icon": "mdi:battery-low",
+   "max": 50,
+   "min": 0,
+   "name": "OpenEMS slim laden reserve SOC",
+   "step": 1,
+   "unit_of_measurement": "%"
+  }
+ },
+ "input_select": {
+  "openems_accuverdeling": {
+   "icon": "mdi:battery-sync-outline",
+   "name": "OpenEMS verdeling bij zelfconsumptie",
+   "options": [
+    "Alle accu’s verdelen",
+    "Efficiënte accuselector (aanbevolen)"
+   ]
+  },
+  "openems_export_rendement_modus": {
+   "icon": "mdi:transmission-tower-export",
+   "name": "OpenEMS rendement voor Export Planner",
+   "options": [
+    "Geen rendement",
+    "Zelfgeleerd rendement",
+    "Handmatig rendement"
+   ]
+  },
+  "openems_export_reserve_modus": {
+   "icon": "mdi:battery-lock",
+   "name": "OpenEMS reserve na laden",
+   "options": [
+    "Vast",
+    "Dynamisch"
+   ]
+  },
+  "openems_export_reserve_voor_laden_modus": {
+   "icon": "mdi:battery-clock-outline",
+   "name": "OpenEMS reserve voor laden",
+   "options": [
+    "Vast",
+    "Dynamisch"
+   ]
+  },
+  "openems_grid_export_modus": {
+   "icon": "mdi:transmission-tower-export",
+   "name": "OpenEMS Grid Export-modus",
+   "options": [
+    "Uit",
+    "Alleen simuleren",
+    "Automatisch exporteren"
+   ]
+  },
+  "openems_grid_offset_modus": {
+   "icon": "mdi:tune-variant",
+   "name": "OpenEMS netoffsetmodus",
+   "options": [
+    "Handmatig",
+    "Automatisch"
+   ]
+  },
+  "openems_grid_sensor_bron": {
+   "icon": "mdi:meter-electric-outline",
+   "name": "OpenEMS netvermogensbron",
+   "options": [
+    "P1",
+    "CT"
+   ]
+  },
+  "openems_grid_vermogen_teken": {
+   "icon": "mdi:plus-minus-variant",
+   "name": "OpenEMS teken netvermogen",
+   "options": [
+    "Positief is afname",
+    "Positief is teruglevering"
+   ]
+  },
+  "openems_handmatig_verdeling": {
+   "icon": "mdi:scale-balance",
+   "name": "OpenEMS handmatige verdeling",
+   "options": [
+    "Gelijk",
+    "Naar SOC"
+   ]
+  },
+  "openems_handmatige_modus": {
+   "icon": "mdi:hand-back-right",
+   "name": "OpenEMS handmatige modus",
+   "options": [
+    "Stop",
+    "Laden",
+    "Ontladen",
+    "Zelfconsumptie"
+   ]
+  },
+  "openems_laad_rendement_modus": {
+   "icon": "mdi:battery-arrow-up",
+   "name": "OpenEMS rendement bij laden",
+   "options": [
+    "Geen rendement",
+    "Zelfgeleerd rendement",
+    "Handmatig rendement"
+   ]
+  },
+  "openems_lb_voorkeur": {
+   "icon": "mdi:swap-horizontal",
+   "name": "OpenEMS load balancer voorkeurssensor",
+   "options": [
+    "P1",
+    "CT"
+   ]
+  },
+  "openems_ontlaad_rendement_modus": {
+   "icon": "mdi:battery-arrow-down",
+   "name": "OpenEMS rendement bij ontladen",
+   "options": [
+    "Geen rendement",
+    "Zelfgeleerd rendement",
+    "Handmatig rendement"
+   ]
+  },
+  "openems_ontlaad_tijdresolutie": {
+   "icon": "mdi:timeline-clock-outline",
+   "name": "OpenEMS tijdresolutie",
+   "options": [
+    "15 minuten",
+    "60 minuten"
+   ]
+  },
+  "openems_zelfconsumptieregeling": {
+   "icon": "mdi:swap-horizontal",
+   "name": "OpenEMS zelfconsumptieregeling",
+   "options": [
+    "Marstek",
+    "OpenEMS"
+   ]
+  }
+ },
+ "input_text": {
+  "openems_accu1_actual_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 werkelijk vermogen"
+  },
+  "openems_accu1_alarm_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 alarmstatus"
+  },
+  "openems_accu1_capacity": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 capaciteit"
+  },
+  "openems_accu1_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 ingesteld laadvermogen"
+  },
+  "openems_accu1_cycles": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 cycli"
+  },
+  "openems_accu1_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 ingesteld ontlaadvermogen"
+  },
+  "openems_accu1_fault_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 foutstatus"
+  },
+  "openems_accu1_force_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 Force Mode"
+  },
+  "openems_accu1_max_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 hoogste celspanning"
+  },
+  "openems_accu1_max_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 maximaal laadvermogen"
+  },
+  "openems_accu1_max_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 maximaal ontlaadvermogen"
+  },
+  "openems_accu1_min_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 laagste celspanning"
+  },
+  "openems_accu1_rs485_control": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 RS485-besturing"
+  },
+  "openems_accu1_soc": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 SOC"
+  },
+  "openems_accu1_temperature": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 temperatuur"
+  },
+  "openems_accu1_total_charging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 totaal geladen energie"
+  },
+  "openems_accu1_total_discharging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 totaal ontladen energie"
+  },
+  "openems_accu1_work_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 1 werkmodus"
+  },
+  "openems_accu2_actual_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 werkelijk vermogen"
+  },
+  "openems_accu2_alarm_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 alarmstatus"
+  },
+  "openems_accu2_capacity": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 capaciteit"
+  },
+  "openems_accu2_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 ingesteld laadvermogen"
+  },
+  "openems_accu2_cycles": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 cycli"
+  },
+  "openems_accu2_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 ingesteld ontlaadvermogen"
+  },
+  "openems_accu2_fault_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 foutstatus"
+  },
+  "openems_accu2_force_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 Force Mode"
+  },
+  "openems_accu2_max_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 hoogste celspanning"
+  },
+  "openems_accu2_max_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 maximaal laadvermogen"
+  },
+  "openems_accu2_max_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 maximaal ontlaadvermogen"
+  },
+  "openems_accu2_min_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 laagste celspanning"
+  },
+  "openems_accu2_rs485_control": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 RS485-besturing"
+  },
+  "openems_accu2_soc": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 SOC"
+  },
+  "openems_accu2_temperature": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 temperatuur"
+  },
+  "openems_accu2_total_charging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 totaal geladen energie"
+  },
+  "openems_accu2_total_discharging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 totaal ontladen energie"
+  },
+  "openems_accu2_work_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 2 werkmodus"
+  },
+  "openems_accu3_actual_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 werkelijk vermogen"
+  },
+  "openems_accu3_alarm_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 alarmstatus"
+  },
+  "openems_accu3_capacity": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 capaciteit"
+  },
+  "openems_accu3_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 ingesteld laadvermogen"
+  },
+  "openems_accu3_cycles": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 cycli"
+  },
+  "openems_accu3_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 ingesteld ontlaadvermogen"
+  },
+  "openems_accu3_fault_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 foutstatus"
+  },
+  "openems_accu3_force_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 Force Mode"
+  },
+  "openems_accu3_max_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 hoogste celspanning"
+  },
+  "openems_accu3_max_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 maximaal laadvermogen"
+  },
+  "openems_accu3_max_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 maximaal ontlaadvermogen"
+  },
+  "openems_accu3_min_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 laagste celspanning"
+  },
+  "openems_accu3_rs485_control": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 RS485-besturing"
+  },
+  "openems_accu3_soc": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 SOC"
+  },
+  "openems_accu3_temperature": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 temperatuur"
+  },
+  "openems_accu3_total_charging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 totaal geladen energie"
+  },
+  "openems_accu3_total_discharging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 totaal ontladen energie"
+  },
+  "openems_accu3_work_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 3 werkmodus"
+  },
+  "openems_accu4_actual_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 werkelijk vermogen"
+  },
+  "openems_accu4_alarm_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 alarmstatus"
+  },
+  "openems_accu4_capacity": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 capaciteit"
+  },
+  "openems_accu4_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 ingesteld laadvermogen"
+  },
+  "openems_accu4_cycles": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 cycli"
+  },
+  "openems_accu4_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 ingesteld ontlaadvermogen"
+  },
+  "openems_accu4_fault_status": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 foutstatus"
+  },
+  "openems_accu4_force_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 Force Mode"
+  },
+  "openems_accu4_max_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 hoogste celspanning"
+  },
+  "openems_accu4_max_charge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 maximaal laadvermogen"
+  },
+  "openems_accu4_max_discharge_power": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 maximaal ontlaadvermogen"
+  },
+  "openems_accu4_min_cell_voltage": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 laagste celspanning"
+  },
+  "openems_accu4_rs485_control": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 RS485-besturing"
+  },
+  "openems_accu4_soc": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 SOC"
+  },
+  "openems_accu4_temperature": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 temperatuur"
+  },
+  "openems_accu4_total_charging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 totaal geladen energie"
+  },
+  "openems_accu4_total_discharging_energy": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 totaal ontladen energie"
+  },
+  "openems_accu4_work_mode": {
+   "icon": "mdi:link-variant",
+   "max": 255,
+   "name": "OpenEMS Accu 4 werkmodus"
+  },
+  "openems_frank_all_in_prijssensor": {
+   "icon": "mdi:cash",
+   "max": 255,
+   "name": "OpenEMS Frank all-in inkoopprijssensor"
+  },
+  "openems_frank_marktprijssensor": {
+   "icon": "mdi:chart-line",
+   "max": 255,
+   "name": "OpenEMS Frank marktprijssensor"
+  },
+  "openems_grid_referentiesensor": {
+   "icon": "mdi:meter-electric-outline",
+   "max": 255,
+   "name": "OpenEMS betrouwbare net-referentiesensor"
+  },
+  "openems_grid_verbruiksensor": {
+   "icon": "mdi:meter-electric",
+   "max": 255,
+   "name": "OpenEMS gridverbruiksensor voor weergave"
+  },
+  "openems_grid_vermogenssensor": {
+   "icon": "mdi:transmission-tower",
+   "max": 255,
+   "name": "OpenEMS grid-vermogenssensor"
+  },
+  "openems_home_offset_laatste_kalibratie": {
+   "icon": "mdi:home-lightning-bolt-outline",
+   "max": 100,
+   "name": "OpenEMS laatste woningoffsetkalibratie"
+  },
+  "openems_offset_laatste_kalibratie": {
+   "icon": "mdi:tune-vertical",
+   "max": 100,
+   "name": "OpenEMS laatste offsetkalibratie"
+  },
+  "openems_prijsvoorspelling_sensor": {
+   "icon": "mdi:chart-line-variant",
+   "max": 255,
+   "name": "OpenEMS prijsvoorspelling sensor"
+  },
+  "openems_woning_vermogenssensor": {
+   "icon": "mdi:home-lightning-bolt-outline",
+   "max": 255,
+   "name": "OpenEMS woning-vermogenssensor"
+  },
+  "openems_zon_vermogenssensor": {
+   "icon": "mdi:solar-power",
+   "max": 255,
+   "name": "OpenEMS zon-vermogenssensor"
+  }
+ }
+}

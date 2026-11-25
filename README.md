@@ -1,135 +1,90 @@
 # OpenEMS-M
 
-Energiemanagement voor **Marstek Venus**-thuisaccu's in Home Assistant, op basis van
-**dynamische energieprijzen**. OpenEMS-M plant laden, ontladen en terugleveren per
-uur, bewaakt de netaansluiting (load balancer) en stuurt de accu's rechtstreeks
-via Modbus TCP aan.
+Energiemanagement voor **Marstek Venus**-thuisaccu's in Home Assistant, met een
+dynamisch energiecontract. OpenEMS-M plant laden en ontladen op de goedkoopste
+en duurste uren, bewaakt de grenzen van je netaansluiting (load balancer) en
+stuurt de accu's rechtstreeks aan via Modbus TCP.
 
-- 1 tot 4 Marstek Venus-accu's
-- Planning op dynamische prijzen (getest met Frank Energie), met prijsvoorspelling
-- Load balancer op de P1-meter (en optioneel CT-klemmen)
-- Eigen zijbalkpaneel in Home Assistant: status, planning, grafieken, resultaten en instellingen
-- Handmatige modus (laden/ontladen, gelijk of naar SOC verdeeld)
+**Versie 1.0.0-beta.1** — eerste installeerbare versie. Gebruik met beleid en
+kijk de eerste dagen mee.
 
-> **Let op:** OpenEMS-M stuurt je accu's echt aan. Gebruik op eigen risico,
-> controleer de instellingen van je netaansluiting en houd de eerste dagen het
-> log in de gaten. Er wordt geen enkele garantie gegeven (zie LICENSE).
+## Wat je nodig hebt
 
----
-
-## Wat zit er in deze repository
-
-| Map | Wat | Waar in Home Assistant |
-|---|---|---|
-| `config/custom_components/marstek_modbus/` | Marstek Modbus-driver (aangepaste versie van *marstek_venus_modbus*) | `/config/custom_components/marstek_modbus/` |
-| `config/custom_components/openems_m_panel/` | Zijbalkpaneel + Modbus-brug | `/config/custom_components/openems_m_panel/` |
-| `config/packages/openems_helper.yaml` | Alle OpenEMS-helpers | `/config/packages/openems_helper.yaml` |
-| `addon_configs/a0d7b954_appdaemon/apps/OpenEMS-M/` | Het EMS zelf (AppDaemon-app) | AppDaemon-map `apps/OpenEMS-M/` |
-| `addon_configs/a0d7b954_appdaemon/apps/openems_site.example.yaml` | Voorbeeld van jouw installatie-instellingen | `apps/openems_site.yaml` |
-| `ontwikkeling/` | Tests (niet nodig in Home Assistant) | – |
-
-De mappen `config` en `addon_configs` komen overeen met de gelijknamige
-Samba-shares van Home Assistant OS.
-
----
-
-## Vereisten
-
-- **Home Assistant OS** 2026.11 of nieuwer
-- Add-on **AppDaemon** (Instellingen → Add-ons → Add-on store → AppDaemon)
-- Marstek Venus E (v1/v2 of v3), D of A met **Modbus TCP** op een **vast IP-adres**
-  (Venus E v3 via de LAN-poort; oudere modellen via een RS485-naar-LAN-adapter)
-- Een **P1-netvermogenssensor** in watt (positief = afname van het net)
-- Een **dynamische all-in-prijssensor** met een `prices`-attribuut
-  (bijv. de Frank Energie-integratie)
-
-> **Belangrijk:** gebruik **niet** de `marstek_modbus`-integratie uit de
-> Marketplace/HACS. OpenEMS-M heeft de meegeleverde versie nodig; de officiële
-> versie mist de functies waarmee OpenEMS de accu's veilig aanstuurt. Staat die
-> al geïnstalleerd, verwijder hem dan eerst (en accepteer daarna geen update
-> van "Marstek Venus Modbus" uit de Marketplace).
-
----
+- Home Assistant **2026.11** of nieuwer, met [HACS](https://hacs.xyz).
+- 1 tot 4 Marstek Venus-accu's (E v1/v2, E v3, D of A) met **Modbus TCP**
+  bereikbaar op je netwerk (vast IP-adres, poort 502).
+- Een **prijssensor met de all-in stroomprijs** per kWh (inclusief opslag en
+  energiebelasting) met de prijzen in een `prices`-attribuut in het formaat van
+  de Frank Energie-integratie: een lijst van `{from, till, price}`. De
+  all-in-sensor van de Frank Energie-integratie werkt direct.
+  **Nord Pool / ENTSO-e** werkt in deze beta alleen via een eigen
+  (template-)sensor die de prijzen in dat formaat aanbiedt; rechtstreekse
+  ondersteuning volgt.
+- Een **netvermogenssensor** (P1-meter en/of CT-meter), afname positief,
+  teruglevering negatief. Hoe vaker hij bijwerkt, hoe sneller de load balancer
+  kan ingrijpen (aanbevolen: minstens elke 10 s).
 
 ## Installatie
 
-1. **Back-up maken** in Home Assistant (Instellingen → Systeem → Back-ups).
-2. **Bestanden kopiëren** (bijv. via de Samba-add-on):
-   - `config/custom_components/marstek_modbus` → `/config/custom_components/`
-   - `config/custom_components/openems_m_panel` → `/config/custom_components/`
-   - `config/packages/openems_helper.yaml` → `/config/packages/`
-   - `addon_configs/a0d7b954_appdaemon/apps/OpenEMS-M` → AppDaemon `apps/`
-3. **configuration.yaml** aanvullen (als dit er nog niet staat):
+1. HACS → menu (⋮) → **Aangepaste repositories** → deze repository toevoegen,
+   type **Integratie**.
+2. Zoek **OpenEMS-M** in HACS, installeer en **herstart Home Assistant**.
+3. Instellingen → Apparaten en diensten → **Integratie toevoegen** →
+   **OpenEMS-M**. De wizard vraagt:
+   1. **Energiecontract**: prijsbron, prijssensor (all-in) en terugleververgoeding.
+   2. **Accu's**: per accu naam, IP-adres, poort, Unit-ID, model en
+      accunummer (1–4, doorlopend). De wizard test de verbinding direct en toont
+      SOC en firmware.
+   3. **Aansluiting**: maximale import en export (W, totaal) en veiligheidsmarge.
+   4. **Netsensoren**: P1 en/of CT, met voorkeur.
+   5. **Start**: Automatisch aan of uit.
+4. Het paneel **OpenEMS-M** verschijnt in de zijbalk.
 
-   ```yaml
-   homeassistant:
-     packages: !include_dir_named packages
+## Gebruik
 
-   openems_m_panel:
-   ```
+- **Hoofdschakelaar** (`switch.openems_actief`): uit = OpenEMS kijkt alleen
+  mee en stuurt niets aan. Laat hem de eerste dag uit en controleer de planning
+  in het paneel.
+- **Accu toevoegen**: bij de integratie → **Accu toevoegen**. Daarna Home
+  Assistant herstarten (je krijgt een melding).
+- **Accu tijdelijk uitzetten**: in het paneel bij de instellingen
+  ("Accu N actief in OpenEMS"). OpenEMS laat die accu dan volledig met rust.
+- **Instellingen** staan als entiteiten onder het apparaat *OpenEMS-M*
+  (`switch.`, `number.`, `select.`, `text.`, `button.`) en zijn ook in het
+  paneel te wijzigen. De sensor voor het woningverbruik stel je in het paneel in.
+- **Data** (geleerd rendement, verbruiksprofiel, resultaten) en het
+  automatisch geschreven `openems_site.yaml` staan in `/config/openems_m/`.
+  Die map blijft bij updates bewaard.
 
-4. **AppDaemon-app registreren**: zet in AppDaemon `apps/apps.yaml`:
+## Belangrijk
 
-   ```yaml
-   marstek_ems:
-     module: marstek_ems
-     class: MarstekEMS
-   ```
+- Gebruik OpenEMS-M **niet tegelijk** met de losse integratie `marstek_modbus`
+  op dezelfde accu's, en niet naast de AppDaemon-versie van OpenEMS-M. Twee
+  Modbus-verbindingen of twee aansturingen naar dezelfde accu storen elkaar.
+- Een accu die (tijdelijk) niet bereikbaar is, houdt de rest niet tegen; zijn
+  entiteiten blijven onbeschikbaar tot hij weer antwoordt.
+- OpenEMS drukt nooit zelf de reset-knop van een accu in.
 
-5. **Home Assistant herstarten.**
-6. **Accu('s) toevoegen**: Instellingen → Apparaten en diensten → Integratie
-   toevoegen → *Marstek Venus Modbus*. Vul in: IP-adres, poort `502`,
-   Unit-ID `1`, het juiste apparaatmodel en het **OpenEMS-accunummer**
-   (1 voor de eerste accu, 2 voor de tweede, …).
-7. **Installatie-instellingen**: kopieer `openems_site.example.yaml` naar
-   `apps/openems_site.yaml` en vul in:
-   - `entiteit_taal`: `nl` of `en` (de taal van je Marstek-entiteiten)
-   - `accus`: per accu het **prefix** van de entity_id's
-     (heet je SOC-sensor `sensor.marstek_venus_battery_soc`, dan is het prefix `marstek_venus`)
-   - `net`: maximale import en export van je aansluiting
-   - `sensoren`: je P1-sensor (en eventuele CT-klemmen)
-   - `prijs`: je all-in-prijssensor
-8. **AppDaemon-add-on herstarten.** In het AppDaemon-log verschijnt
-   `OpenEMS-M v…`, en in de zijbalk staat het paneel **OpenEMS-M**.
-9. Controleer in het paneel onder **Instellingen** de entiteiten per accu en
-   de netsensoren. Zet daarna **Automatisch** aan.
+Overstappen van de AppDaemon-versie: zie [MIGRATIE.md](MIGRATIE.md).
 
-### Eerste dagen
+## Ontwikkeling
 
-- Kijk in het AppDaemon-log en in het paneel (Status) of de accu's de
-  opdrachten bevestigen.
-- OpenEMS drukt **nooit** zelf de resetknop van een accu in.
-- Firmware-updates van Marstek kunnen de Modbus-verbinding tijdelijk
-  verbreken; de driver verbindt daarna vanzelf opnieuw.
+- `custom_components/openems_m/ems/` (planning en aansturing),
+  `driver/` (Marstek Modbus-driver), `frontend/` (paneel) en `helpers.json`
+  worden **gegenereerd** uit de ontwikkelmap. Niet handmatig wijzigen; na een
+  wijziging opnieuw genereren vanuit de ontwikkelmap:
+  ```bash
+  python integratie/tools/sync_ems.py .
+  ```
+- `bridge/hassapi.py` is de tussenlaag die de OpenEMS-code binnen Home
+  Assistant laat draaien (zelfde functies als AppDaemon; alle callbacks achter
+  elkaar in één werk-thread).
+- Tests:
+  ```bash
+  python -m pytest -q tests
+  ```
 
----
+## Licentie
 
-## Bijwerken
-
-1. Back-up maken.
-2. De vier mappen/bestanden uit stap 2 opnieuw kopiëren (je eigen
-   `openems_site.yaml` en de map `OpenEMS-M-data` blijven staan).
-3. Home Assistant herstarten en daarna de AppDaemon-add-on.
-4. Paneel verversen met Ctrl+F5.
-
----
-
-## Testen (ontwikkelaars)
-
-Vanuit de hoofdmap van de repository:
-
-```bash
-PYTHONPATH=addon_configs/a0d7b954_appdaemon/apps/OpenEMS-M python -m pytest -q ontwikkeling/tests
-node ontwikkeling/browser/assigned-hour-blocks.test.mjs
-```
-
----
-
-## Licentie en herkomst
-
-- OpenEMS-M en het paneel: **GNU GPL v3** (zie `LICENSE`).
-  Het visuele ontwerp van het paneel is afgeleid van
-  [Marstek Venus Energy Manager](https://github.com/ffunes/Marstek-Venus-Energy-Manager) (GPL v3).
-- De Modbus-driver is een aangepaste versie van
-  [marstek_venus_modbus](https://github.com/ViperRNMC/marstek_venus_modbus) van ViperRNMC,
-  **MIT-licentie** (zie `config/custom_components/marstek_modbus/LICENSE`).
+Zie `LICENSE`. De Marstek-driver is gebaseerd op
+[marstek_venus_modbus](https://github.com/ViperRNMC/marstek_venus_modbus).

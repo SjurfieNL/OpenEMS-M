@@ -1,9 +1,0 @@
-OpenEMS-M Panel
-===============
-
-The visual design and SOC-ring approach are derived from:
-Marstek Venus Energy Manager by ffunes
-https://github.com/ffunes/Marstek-Venus-Energy-Manager
-
-Original project and this derivative panel are distributed under the GNU
-General Public License version 3.0. No warranty is provided.

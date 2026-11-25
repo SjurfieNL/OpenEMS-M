@@ -1,4 +1,0 @@
-# Voeg dit toe aan addon_configs/a0d7b954_appdaemon/apps/apps.yaml
-marstek_ems:
-  module: marstek_ems
-  class: MarstekEMS

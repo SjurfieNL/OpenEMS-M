@@ -1,0 +1,84 @@
+set_battery_power:
+  name: Accuvermogen atomair instellen
+  description: >-
+    Laat OpenEMS laadvermogen, ontlaadvermogen en Force Mode via de bestaande
+    MarsTek Modbus-coordinator onder één lock schrijven en teruglezen.
+  fields:
+    battery:
+      name: Accu
+      description: Accunummer in de MarsTek-configuratie.
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 4
+          mode: box
+    charge_power:
+      name: Laadvermogen
+      description: Gewenst laadvermogen in watt; nul bij ontladen of stoppen.
+      required: true
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 2500
+          unit_of_measurement: W
+          mode: box
+    discharge_power:
+      name: Ontlaadvermogen
+      description: Gewenst ontlaadvermogen in watt; nul bij laden of stoppen.
+      required: true
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 2500
+          unit_of_measurement: W
+          mode: box
+    source:
+      name: Bron
+      description: Onderdeel van OpenEMS dat deze opdracht veroorzaakt.
+      required: false
+      example: "grid_export"
+      selector:
+        text:
+    reason:
+      name: Reden
+      description: Leesbare reden die in de Modbus-write-audit terugkomt.
+      required: false
+      example: "gepland exportblok actief"
+      selector:
+        text:
+
+set_battery_powers:
+  name: Accuvermogens als nieuwste batch instellen
+  description: >-
+    Neemt één complete OpenEMS-intentie voor alle accu's aan. Onafhankelijke
+    accuverbindingen schrijven parallel; tijdens uitvoering blijft alleen de
+    nieuwste opvolgende batch bewaard.
+  fields:
+    commands:
+      name: Accuopdrachten
+      description: Lijst met accunummer, laadvermogen en ontlaadvermogen.
+      required: true
+      example:
+        - battery: 1
+          charge_power: 0
+          discharge_power: 0
+        - battery: 2
+          charge_power: 0
+          discharge_power: 0
+        - battery: 3
+          charge_power: 0
+          discharge_power: 750
+      selector:
+        object:
+    request_id:
+      name: OpenEMS-opdrachtnummer
+      description: >-
+        Uniek intern nummer dat ongewijzigd terugkomt in het
+        openems_marstek_control_result-event.
+      required: false
+      example: "1785226000000-4-0"
+      selector:
+        text:
